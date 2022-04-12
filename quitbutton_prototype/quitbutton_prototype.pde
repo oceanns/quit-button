@@ -27,14 +27,17 @@ void draw()
 {
   //DeisplayOrientation finishing code
   //
-  if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) 
+  if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight)
   {
     buttonColour = purple;
-  } else {
+  }
+  else
+  {
     buttonColour = yellow;
   } 
-  
-  
+  //println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t loot at the middle value");
+  //println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight, "\t\t loot at the middle value");
+  //
   fill(buttonColour);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   fill(resetWhite);
@@ -46,5 +49,8 @@ void keyPressed()
   if ( key=='Q' || key=='q') exit();//key board is seperated on key-variables: key & keyCode
 }
 //
-void mousePressed() {}
+void mousePressed() 
+{
+
+}
 //
