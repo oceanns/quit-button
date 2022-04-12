@@ -35,8 +35,8 @@ void draw()
   {
     buttonColour = yellow;
   } 
-  //println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t loot at the middle value");
-  //println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight, "\t\t loot at the middle value");
+  println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t loot at the middle value");
+  println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight, "\t\t loot at the middle value");
   //
   fill(buttonColour);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
