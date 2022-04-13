@@ -1,7 +1,7 @@
 //global variable
 int appWidth, appHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-color yellow=#F7E452, purple=#751DCE, resetWhite=#FFFFFF, buttonColour;
+color yellow=#AFEA28, purple=#F5234D, resetWhite=#FFFFFF, buttonColour;
 //
 void setup() 
 {
@@ -21,6 +21,9 @@ void setup()
   quitButtonY = centerY - appHeight*1/4;
   quitButtonWidth =appWidth*1/2;
   quitButtonHeight = appHeight*1/2;
+  //
+  PImage img = loadImage("Dino-480x152.gif");
+  image(img,10,10);
 }
 //
 void draw() 
@@ -51,6 +54,6 @@ void keyPressed()
 //
 void mousePressed() 
 {
-
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
 }
 //
