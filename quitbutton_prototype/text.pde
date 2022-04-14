@@ -1,6 +1,6 @@
 void textSetup () 
 {
-String title = "hoVer button to play, click to exit";
+String title = "<- hoVer button to play, click to exit";
 PFont titleFont;
 float titleX, titleY, titleWidth, titleHeight;
 color resetDefaultLink=#FFFFFF, blue=#387E9B;
