@@ -6,6 +6,7 @@ color yellow=#AFEA28, purple=#F5234D, resetWhite=#FFFFFF, buttonColour;
 void setup() 
 {
   //display
+  measleSetup();
   fullScreen();
   String landscape = "you are good";
   String portrait = "turn phone";
@@ -15,28 +16,30 @@ void setup()
   if (displayOrientation==landscape) appHeight = displayHeight;
   println(appWidth, appHeight);
   //population
-  int centerX = appWidth*1/2;
-  int centerY = appHeight*1/2;
-  quitButtonX = centerX - appWidth*1/4;
-  quitButtonY = centerY - appHeight*1/4;
-  quitButtonWidth =appWidth*1/2;
-  quitButtonHeight = appHeight*1/2;
+  int centerX = appWidth*1/6;
+  int centerY = appHeight*1/4;
+  quitButtonX = centerX - appWidth*1/8;
+  quitButtonY = centerY - appHeight*1/8;
+  quitButtonWidth =appWidth*1/8;
+  quitButtonHeight = appHeight*1/4;
   //
-  PImage img = loadImage("Dino-480x152.gif");
-  image(img,10,10);
+  textSetup();
 }
 //
 void draw() 
 {
-  //DeisplayOrientation finishing code
+  //DisplayOrientation finishing code
   //
   if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight)
   {
     buttonColour = purple;
+    measleDraw();
+    imageDraw1();
   }
   else
   {
     buttonColour = yellow;
+    imageDraw2();
   } 
   println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t loot at the middle value");
   println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight, "\t\t loot at the middle value");
@@ -44,6 +47,8 @@ void draw()
   fill(buttonColour);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   fill(resetWhite);
+  //
+
 }
 //
 void keyPressed() 
